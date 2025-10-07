@@ -1,9 +1,10 @@
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
-import gamesData from './data/games';
-import gameMetadata from './data/metadata';
-import { GameCategory, GamesByCategory, GameMetadataByCategory, GamesResponse, HealthResponse, GameInfo } from './types/Game';
+import { HealthResponse } from './types/Game';
+import { getGamesByCategory } from './services/games';
+import { getGameMetaData } from './services/gameMetaData';
+import { getGameInfo } from './services/gameInfo';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -13,77 +14,21 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json());
 
-// Type guard to check if category is valid
-const isValidCategory = (category: string): category is GameCategory => {
-  return ['slots', 'bingo', 'live-dealer', 'poker'].includes(category);
-};
-
 // Routes
 
 // Get games by category
 app.get('/api/games/:category', (req: Request, res: Response) => {
-  const { category } = req.params;
-  
-  if (!isValidCategory(category)) {
-    return res.status(404).json({ error: 'Category not found' });
-  }
-  
-  const games = (gamesData as GamesByCategory)[category];
-  if (!games) {
-    return res.status(404).json({ error: 'Category not found' });
-  }
-  
-  const response: GamesResponse = {
-    category,
-    games
-  };
-  
-  res.json(response);
+  return getGamesByCategory(req, res);
 });
 
 // Get game metadata
 app.get('/api/games/:category/:gameId/metadata', (req: Request, res: Response) => {
-  const { category, gameId } = req.params;
-  
-  if (!isValidCategory(category)) {
-    return res.status(404).json({ error: 'Invalid category' });
-  }
-  
-  const categoryMetadata = (gameMetadata as GameMetadataByCategory)[category];
-  if (!categoryMetadata || !categoryMetadata[gameId]) {
-    return res.status(404).json({ error: 'Game metadata not found' });
-  }
-  
-  res.json(categoryMetadata[gameId]);
+  return getGameMetaData(req, res);
 });
 
 // Get game info/details
 app.get('/api/games/:category/:gameId/info', (req: Request, res: Response) => {
-  const { category, gameId } = req.params;
-  
-  if (!isValidCategory(category)) {
-    return res.status(404).json({ error: 'Invalid category' });
-  }
-  
-  const games = (gamesData as GamesByCategory)[category];
-  const game = games?.find(g => g.id === gameId);
-  
-  if (!game) {
-    return res.status(404).json({ error: 'Game not found' });
-  }
-  
-  const gameInfo: GameInfo = {
-    ...game,
-    details: {
-      description: game.description,
-      rtp: game.rtp,
-      minBet: game.minBet,
-      maxBet: game.maxBet,
-      features: game.features || []
-    }
-  };
-  
-  res.json(gameInfo);
+  return getGameInfo(req, res);
 });
 
 // Health check

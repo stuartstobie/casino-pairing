@@ -6,8 +6,6 @@ export interface Game {
   rtp: string;
   minBet: number;
   maxBet: number;
-  description: string;
-  features: string[];
 }
 
 export interface GamesByCategory {
@@ -15,6 +13,22 @@ export interface GamesByCategory {
   bingo: Game[];
   'live-dealer': Game[];
   poker: Game[];
+}
+
+export interface GameInfoData {
+  id: string;
+  rtp: string;
+  minBet: number;
+  maxBet: number;
+  description: string;
+  features: string[];
+}
+
+export interface GameInfoByCategory {
+  slots: GameInfoData[];
+  bingo: GameInfoData[];
+  'live-dealer': GameInfoData[];
+  poker: GameInfoData[];
 }
 
 export type GameCategory = keyof GamesByCategory;
@@ -86,7 +100,7 @@ export interface GameMetadataByCategory {
   poker: Record<string, PokerMetadata>;
 }
 
-export interface GameInfo extends Game {
+export interface GameInfo {
   details: {
     description: string;
     rtp: string;

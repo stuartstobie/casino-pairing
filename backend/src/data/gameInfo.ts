@@ -1,10 +1,9 @@
-const games = {
+import { GameInfoByCategory } from '../types/Game';
+
+const games: GameInfoByCategory = {
   slots: [
     {
       id: 'mega-fortune',
-      name: 'Mega Fortune',
-      image: 'https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=Mega+Fortune',
-      provider: 'NetEnt',
       rtp: '96.6%',
       minBet: 0.25,
       maxBet: 50,
@@ -13,9 +12,6 @@ const games = {
     },
     {
       id: 'starburst',
-      name: 'Starburst',
-      image: 'https://via.placeholder.com/300x200/4ECDC4/FFFFFF?text=Starburst',
-      provider: 'NetEnt',
       rtp: '96.1%',
       minBet: 0.10,
       maxBet: 100,
@@ -24,9 +20,6 @@ const games = {
     },
     {
       id: 'gonzo-quest',
-      name: "Gonzo's Quest",
-      image: 'https://via.placeholder.com/300x200/45B7D1/FFFFFF?text=Gonzo%27s+Quest',
-      provider: 'NetEnt',
       rtp: '95.97%',
       minBet: 0.20,
       maxBet: 50,
@@ -35,9 +28,6 @@ const games = {
     },
     {
       id: 'book-of-dead',
-      name: 'Book of Dead',
-      image: 'https://via.placeholder.com/300x200/F7DC6F/000000?text=Book+of+Dead',
-      provider: 'Play\'n GO',
       rtp: '94.25%',
       minBet: 0.01,
       maxBet: 100,
@@ -49,9 +39,6 @@ const games = {
   bingo: [
     {
       id: 'lucky-numbers',
-      name: 'Lucky Numbers Bingo',
-      image: 'https://via.placeholder.com/300x200/E74C3C/FFFFFF?text=Lucky+Numbers',
-      provider: 'Bingo Games Ltd',
       rtp: '95.0%',
       minBet: 0.10,
       maxBet: 5,
@@ -60,9 +47,6 @@ const games = {
     },
     {
       id: 'rainbow-riches-bingo',
-      name: 'Rainbow Riches Bingo',
-      image: 'https://via.placeholder.com/300x200/27AE60/FFFFFF?text=Rainbow+Riches',
-      provider: 'Scientific Games',
       rtp: '94.5%',
       minBet: 0.05,
       maxBet: 2,
@@ -71,9 +55,6 @@ const games = {
     },
     {
       id: 'speed-bingo',
-      name: 'Speed Bingo',
-      image: 'https://via.placeholder.com/300x200/9B59B6/FFFFFF?text=Speed+Bingo',
-      provider: 'FastPlay Gaming',
       rtp: '96.2%',
       minBet: 0.25,
       maxBet: 10,
@@ -85,9 +66,6 @@ const games = {
   'live-dealer': [
     {
       id: 'live-blackjack',
-      name: 'Live Blackjack',
-      image: 'https://via.placeholder.com/300x200/2C3E50/FFFFFF?text=Live+Blackjack',
-      provider: 'Evolution Gaming',
       rtp: '99.28%',
       minBet: 1,
       maxBet: 5000,
@@ -96,9 +74,6 @@ const games = {
     },
     {
       id: 'live-roulette',
-      name: 'Live Roulette',
-      image: 'https://via.placeholder.com/300x200/C0392B/FFFFFF?text=Live+Roulette',
-      provider: 'Evolution Gaming',
       rtp: '97.30%',
       minBet: 0.50,
       maxBet: 10000,
@@ -107,9 +82,6 @@ const games = {
     },
     {
       id: 'live-baccarat',
-      name: 'Live Baccarat',
-      image: 'https://via.placeholder.com/300x200/8E44AD/FFFFFF?text=Live+Baccarat',
-      provider: 'Playtech',
       rtp: '98.94%',
       minBet: 5,
       maxBet: 10000,
@@ -118,9 +90,6 @@ const games = {
     },
     {
       id: 'live-poker',
-      name: 'Live Casino Hold\'em',
-      image: 'https://via.placeholder.com/300x200/16A085/FFFFFF?text=Live+Poker',
-      provider: 'Evolution Gaming',
       rtp: '97.84%',
       minBet: 1,
       maxBet: 1000,
@@ -132,9 +101,6 @@ const games = {
   poker: [
     {
       id: 'texas-holdem',
-      name: 'Texas Hold\'em',
-      image: 'https://via.placeholder.com/300x200/D35400/FFFFFF?text=Texas+Hold%27em',
-      provider: 'PokerStars',
       rtp: 'N/A',
       minBet: 0.01,
       maxBet: 1000,
@@ -143,9 +109,6 @@ const games = {
     },
     {
       id: 'omaha',
-      name: 'Omaha Hold\'em',
-      image: 'https://via.placeholder.com/300x200/7F8C8D/FFFFFF?text=Omaha',
-      provider: 'PokerStars',
       rtp: 'N/A',
       minBet: 0.02,
       maxBet: 500,
@@ -154,9 +117,6 @@ const games = {
     },
     {
       id: 'seven-card-stud',
-      name: 'Seven Card Stud',
-      image: 'https://via.placeholder.com/300x200/95A5A6/FFFFFF?text=7+Card+Stud',
-      provider: 'Classic Poker',
       rtp: 'N/A',
       minBet: 0.05,
       maxBet: 200,
@@ -166,4 +126,4 @@ const games = {
   ]
 };
 
-module.exports = games;
+export default games;
