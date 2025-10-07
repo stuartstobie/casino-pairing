@@ -37,6 +37,15 @@ const games: GamesByCategory = {
       rtp: '94.25%',
       minBet: 0.01,
       maxBet: 100
+    },
+    {
+      id: 'mega-fortune',
+      name: 'Mega Fortune',
+      image: 'https://cdn.prd00.iedu.ballys.tech/ucn/jackpotjoy/api/content/gametiles/mega-bars-jk/scale-1/mega-bars-jackpot-king-tile-15-972.jpg',
+      provider: 'NetEnt',
+      rtp: '96.6%',
+      minBet: 0.25,
+      maxBet: 50
     }
   ],
   

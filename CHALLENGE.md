@@ -1,6 +1,6 @@
 ### Get started
 1. Start the service `yarn dev`
-2. Explore the app. Explore the Code. Explore the tests.
+2. Explore the app. Explore the Code. Explore the Console Output (browser). Explore the tests.
 
 ### THE FUN BEGINS
 Start in the frontend:
@@ -11,7 +11,8 @@ Start in the frontend:
 3. Can you get all the unit tests passing?
 4. Looks like one of the test suites is skipped, could you write those tests?
 5. The bingo page is looking very empty isn't it (optional)
-6. Is there anything you would change, refactor, or restyle? (extension)
+7. Is there anything you would change, refactor, or restyle? (extension)
+8. We would like to add a new product, Slingo, how would you do that? (extension)
 
 
 
