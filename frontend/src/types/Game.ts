@@ -6,15 +6,13 @@ export interface Game {
   rtp: string;
   minBet: number;
   maxBet: number;
-  description: string;
-  features: string[];
 }
 
 export interface GameMetadata {
   [key: string]: any;
 }
 
-export interface GameInfo extends Game {
+export interface GameInfo {
   details: {
     description: string;
     rtp: string;

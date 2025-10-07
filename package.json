@@ -8,13 +8,15 @@
     "frontend"
   ],
   "scripts": {
-    "dev": "concurrently \"yarn workspace backend dev\" \"yarn workspace frontend start\"",
-    "server": "yarn workspace backend dev",
-    "client": "yarn workspace frontend start",
-    "build": "yarn workspace backend build && yarn workspace frontend build",
+    "dev": "concurrently \"yarn workspace casino-backend dev\" \"yarn workspace casino-frontend start\"",
+    "server": "yarn workspace casino-backend dev",
+    "client": "yarn workspace casino-frontend start",
+    "build": "yarn workspace casino-backend build && yarn workspace casino-frontend build",
     "install-all": "yarn install",
-    "clean": "yarn workspace backend clean && yarn workspace frontend clean",
-    "type-check": "yarn workspace backend type-check && yarn workspace frontend type-check"
+    "clean": "yarn workspace casino-backend clean && yarn workspace casino-frontend clean",
+    "type-check": "yarn workspace casino-backend type-check && yarn workspace casino-frontend type-check",
+    "test": "yarn workspace casino-backend test",
+    "test:watch": "yarn workspace casino-backend test:watch"
   },
   "devDependencies": {
     "concurrently": "7.6.0"
