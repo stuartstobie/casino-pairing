@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Game, GameCategory, GameMetadata, GameInfo } from '../types/Game';
 import { api } from '../services/api';
-import './GameModal.css';
+import './GameInfoModal.css';
 
-interface GameModalProps {
+interface GameInfoModalProps {
   game: Game;
   category: GameCategory;
   onClose: () => void;
 }
 
-const GameModal: React.FC<GameModalProps> = ({ game, category, onClose }) => {
+const GameInfoModal: React.FC<GameInfoModalProps> = ({ game, category, onClose }) => {
   const [gameInfo, setGameInfo] = useState<GameInfo | null>(null);
   const [metadata, setMetadata] = useState<GameMetadata | null>(null);
   const [loading, setLoading] = useState(true);
@@ -203,4 +203,4 @@ const GameModal: React.FC<GameModalProps> = ({ game, category, onClose }) => {
   );
 };
 
-export default GameModal;
+export default GameInfoModal;

@@ -109,7 +109,7 @@ casino-pairing/                    # Yarn workspace root
 │   │   ├── components/
 │   │   │   ├── Header.tsx        # Navigation header
 │   │   │   ├── GameTile.tsx      # Game tile component
-│   │   │   └── GameModal.tsx     # Game info modal
+│   │   │   └── GameInfoModal.tsx     # Game info modal
 │   │   ├── pages/
 │   │   │   ├── HomePage.tsx      # Landing page
 │   │   │   ├── SlotsPage.tsx     # Slots games

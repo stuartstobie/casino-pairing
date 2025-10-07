@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Game, GameCategory } from '../types/Game';
-import GameModal from './GameModal';
+import GameInfoModal from './GameInfoModal';
 import './GameTile.css';
 
 interface GameTileProps {
@@ -54,7 +54,7 @@ const GameTile: React.FC<GameTileProps> = ({ game, category }) => {
       </div>
 
       {isModalOpen && (
-        <GameModal
+        <GameInfoModal
           game={game}
           category={category}
           onClose={() => setIsModalOpen(false)}
