@@ -1,0 +1,26 @@
+{
+  "name": "casino-lobby-challenge",
+  "version": "1.0.0",
+  "description": "Technical challenge: Casino lobby application with React frontend and Node.js backend",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"yarn workspace backend dev\" \"yarn workspace frontend start\"",
+    "server": "yarn workspace backend dev",
+    "client": "yarn workspace frontend start",
+    "build": "yarn workspace backend build && yarn workspace frontend build",
+    "install-all": "yarn install",
+    "clean": "yarn workspace backend clean && yarn workspace frontend clean",
+    "type-check": "yarn workspace backend type-check && yarn workspace frontend type-check"
+  },
+  "devDependencies": {
+    "concurrently": "7.6.0"
+  },
+  "keywords": ["casino", "react", "typescript", "node", "express", "interview", "challenge", "yarn-workspaces"],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "yarn@1.22.19"
+}
