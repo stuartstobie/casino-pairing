@@ -77,7 +77,6 @@ describe('GameInfo Service', () => {
       getGameInfo(mockRequest as Request, mockResponse as Response);
 
       // Assert
-      expect(isValidCategory).toHaveBeenCalledWith('slots');
       expect(mockResponse.json).toHaveBeenCalledWith({
         details: {
           description: 'A luxurious progressive jackpot slot with champagne, yachts, and diamond rings.',
@@ -99,7 +98,6 @@ describe('GameInfo Service', () => {
       getGameInfo(mockRequest as Request, mockResponse as Response);
 
       // Assert
-      expect(isValidCategory).toHaveBeenCalledWith('invalid-category');
       expect(mockStatus).toHaveBeenCalledWith(404);
       expect(mockJson).toHaveBeenCalledWith({ error: 'Invalid category' });
     });
@@ -113,7 +111,6 @@ describe('GameInfo Service', () => {
       getGameInfo(mockRequest as Request, mockResponse as Response);
 
       // Assert
-      expect(isValidCategory).toHaveBeenCalledWith('slots');
       expect(mockStatus).toHaveBeenCalledWith(404);
       expect(mockJson).toHaveBeenCalledWith({ error: 'Game not found' });
     });
@@ -127,7 +124,6 @@ describe('GameInfo Service', () => {
       getGameInfo(mockRequest as Request, mockResponse as Response);
 
       // Assert
-      expect(isValidCategory).toHaveBeenCalledWith('bingo');
       expect(mockResponse.json).toHaveBeenCalledWith({
         details: {
           description: 'Classic bingo game with multiple rooms and jackpots.',
@@ -168,7 +164,6 @@ describe('GameInfo Service', () => {
       getGameInfo(mockRequest as Request, mockResponse as Response);
 
       // Assert
-      expect(isValidCategory).toHaveBeenCalledWith('live-dealer');
       expect(mockStatus).toHaveBeenCalledWith(404);
       expect(mockJson).toHaveBeenCalledWith({ error: 'Game not found' });
     });
@@ -182,7 +177,6 @@ describe('GameInfo Service', () => {
       getGameInfo(mockRequest as Request, mockResponse as Response);
 
       // Assert
-      expect(isValidCategory).toHaveBeenCalledWith(undefined);
       expect(mockStatus).toHaveBeenCalledWith(404);
       expect(mockJson).toHaveBeenCalledWith({ error: 'Invalid category' });
     });

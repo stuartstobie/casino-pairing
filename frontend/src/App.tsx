@@ -4,7 +4,6 @@ import './App.css';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
 import SlotsPage from './pages/SlotsPage';
-import BingoPage from './pages/BingoPage';
 import LiveDealerPage from './pages/LiveDealerPage';
 import PokerPage from './pages/PokerPage';
 
@@ -17,7 +16,6 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/slots" element={<SlotsPage />} />
-            <Route path="/bingo" element={<BingoPage />} />
             <Route path="/live-dealer" element={<LiveDealerPage />} />
             <Route path="/poker" element={<PokerPage />} />
           </Routes>

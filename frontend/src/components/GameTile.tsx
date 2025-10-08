@@ -14,7 +14,8 @@ const GameTile: React.FC<GameTileProps> = ({ game, category }) => {
   const handleInfoClick = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    setIsModalOpen(true);
+
+    console.log(`Info clicked: ${game.name}`);
   };
 
   const handleTileClick = () => {
