@@ -75,8 +75,8 @@ yarn workspace frontend start
 yarn install
 
 # Run a command in a specific workspace
-yarn workspace backend <command>
-yarn workspace frontend <command>
+yarn workspace casino-backend <command>
+yarn workspace casino-frontend <command>
 
 # Build all projects
 yarn build
