@@ -10,7 +10,7 @@ Start in the frontend:
 3. You can, great! But is it working as expected? (you might need to dive into the backend about now...)
 4. Can you get all the backend unit tests passing?
 5. Looks like one of the test suites is skipped, could you write those tests?
-6. The bingo page is looking very empty isn't it, time to
+6. The bingo page is looking very empty isn't it, time to build it.
 7. Is there anything you would change, refactor, or restyle? (discussion/extension)
 8. We would like to add a new product category, how would you do that? (discussion)
 
