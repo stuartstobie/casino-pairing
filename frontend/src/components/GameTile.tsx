@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Game, GameCategory } from '../types/Game';
 import GameInfoModal from './GameInfoModal';
 import './GameTile.css';
@@ -9,7 +9,7 @@ interface GameTileProps {
 }
 
 const GameTile: React.FC<GameTileProps> = ({ game, category }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const isModalOpen = false;
 
   const handleInfoClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -58,7 +58,7 @@ const GameTile: React.FC<GameTileProps> = ({ game, category }) => {
         <GameInfoModal
           game={game}
           category={category}
-          onClose={() => setIsModalOpen(false)}
+          onClose={() => {}}
         />
       )}
     </>
