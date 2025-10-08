@@ -1,6 +1,6 @@
 # 🎰 Casino Lobby - Technical Challenge
 
-A full-stack casino lobby application built with React TypeScript frontend and Node.js Express backend. This project serves as a technical interview challenge for junior software engineers.
+A full-stack casino lobby application built with React TypeScript frontend and Node.js Express backend. This project serves as a technical interview challenge for junior software engineers. For challenge instructions, see here: [CHALLENGE.md](./CHALLENGE.md)
 
 ## 🎯 Challenge Overview
 
