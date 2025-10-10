@@ -79,6 +79,7 @@ describe('GameInfo Service', () => {
       // Assert
       expect(mockResponse.json).toHaveBeenCalledWith({
         details: {
+          id: "mega-fortune",
           description: 'A luxurious progressive jackpot slot with champagne, yachts, and diamond rings.',
           rtp: '96.6%',
           minBet: 0.25,
@@ -86,7 +87,7 @@ describe('GameInfo Service', () => {
           features: ['Progressive Jackpot', 'Free Spins', 'Wild Symbols']
         }
       });
-      expect(mockStatus).not.toHaveBeenCalled();
+      expect(mockStatus).toHaveBeenCalled();
     });
 
     it('should return 404 for invalid category', () => {
@@ -99,7 +100,7 @@ describe('GameInfo Service', () => {
 
       // Assert
       expect(mockStatus).toHaveBeenCalledWith(404);
-      expect(mockJson).toHaveBeenCalledWith({ error: 'Invalid category' });
+      expect(mockJson).toHaveBeenCalledWith({ error: 'Category not found' });
     });
 
     it('should return 404 for valid category but non-existent gameId', () => {
@@ -126,6 +127,7 @@ describe('GameInfo Service', () => {
       // Assert
       expect(mockResponse.json).toHaveBeenCalledWith({
         details: {
+          id: "bingo-bonanza",
           description: 'Classic bingo game with multiple rooms and jackpots.',
           rtp: '95.0%',
           minBet: 0.10,

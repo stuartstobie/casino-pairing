@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage';
 import SlotsPage from './pages/SlotsPage';
 import LiveDealerPage from './pages/LiveDealerPage';
 import PokerPage from './pages/PokerPage';
+import BingoPage from './pages/BingoPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/slots" element={<SlotsPage />} />
             <Route path="/live-dealer" element={<LiveDealerPage />} />
             <Route path="/poker" element={<PokerPage />} />
+            <Route path="/bingo" element={<BingoPage />} />
           </Routes>
         </main>
       </div>

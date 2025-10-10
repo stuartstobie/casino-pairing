@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Game, GameCategory } from '../types/Game';
 import GameInfoModal from './GameInfoModal';
 import './GameTile.css';
@@ -9,14 +9,18 @@ interface GameTileProps {
 }
 
 const GameTile: React.FC<GameTileProps> = ({ game, category }) => {
-  const isModalOpen = false;
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   const handleInfoClick = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-
+    setIsModalOpen(true);
     console.log(`Info clicked: ${game.name}`);
   };
+
+  const handleBackdropClick = () => {
+    setIsModalOpen(false);
+  }
 
   const handleTileClick = () => {
     // In a real application, this would launch the game
@@ -46,7 +50,9 @@ const GameTile: React.FC<GameTileProps> = ({ game, category }) => {
           <h3 className="game-title">{game.name}</h3>
           <p className="game-provider">{game.provider}</p>
           <div className="game-stats">
-            <span className="game-rtp">RTP: {game.rtp}</span>
+            {game.rtp !== "N/A" ? (
+              <span className="game-rtp">RTP: {game.rtp}</span>
+            ) : ""}
             <span className="game-bet-range">
               ${game.minBet} - ${game.maxBet}
             </span>
@@ -58,7 +64,7 @@ const GameTile: React.FC<GameTileProps> = ({ game, category }) => {
         <GameInfoModal
           game={game}
           category={category}
-          onClose={() => {}}
+          onClose={handleBackdropClick}
         />
       )}
     </>

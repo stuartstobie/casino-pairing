@@ -23,8 +23,11 @@ export const api = {
 
   // Get game info/details
   async getGameInfo(category: GameCategory, gameId: string): Promise<GameInfo> {
-      // TODO: Implement this
-      throw new Error(`Not implemented: getGameInfo for ${category}/${gameId}`);
+      const response = await fetch(`${API_BASE_URL}/games/${category}/${gameId}/info`);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch metadata for game: ${gameId}`);
+    }
+    return response.json();
   },
 
   // Health check
