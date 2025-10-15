@@ -1,6 +1,6 @@
 ### Get started
 1. Start the service by running `yarn dev`
-2. Explore the app. Explore the Code. Explore the Console Output (browser/terminal). Explore the tests.
+2. Explore the app. Explore the code. Explore the console output (browser/terminal). Explore the tests.
 
 ### THE FUN BEGINS
 
