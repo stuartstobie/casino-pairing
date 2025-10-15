@@ -1,6 +1,6 @@
 ### Get started
-1. Start the service `yarn dev`
-2. Explore the app. Explore the Code. Explore the Console Output (browser). Explore the tests.
+1. Start the service by running `yarn dev`
+2. Explore the app. Explore the Code. Explore the Console Output (browser/terminal). Explore the tests.
 
 ### THE FUN BEGINS
 
@@ -18,7 +18,6 @@
 #### More frontend:
 
 6. The bingo page is looking empty isn't it, time to build it.
-
 
 #### Extension/Discussion:
 
